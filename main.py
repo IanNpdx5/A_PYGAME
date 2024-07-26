@@ -145,6 +145,7 @@ def draw_enemy():
     if player.colliderect(enemy.rect):
         # print("You lost! :(")
         # sys.exit()
+        start_music("music/Infinite Perspective.mp3")
         scene = 3
 
 
@@ -160,6 +161,7 @@ def draw_princess():
     if player.colliderect(princess):
         # print("You won! :)")
         # sys.exit()
+        start_music("music/Infinite Perspective.mp3")
         scene = 4
 
 
@@ -239,6 +241,7 @@ while True:
                     scene = 2
                     player = pygame.Rect(player_x, player_y, player_w, player_h)
                     enemy = Enemy(enemy_x, enemy_y, enemy_w, enemy_h, enemy_s, "h", 50, 1450)
+                    start_music("music/Mesmerizing Galaxy Loop.mp3")
                 elif key[pygame.K_q] or key[pygame.K_ESCAPE] or key[pygame.K_END]:
                     print("You left the game. :|")
                     sys.exit()
